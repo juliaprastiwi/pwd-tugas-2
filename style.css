@@ -1,0 +1,652 @@
+:root {
+  --hitam-bg: #110f0f;
+  --hitam-layar: #0f0f0f;
+  --hitam-kartu: #1a1a1a;
+  --merah-utama: #b20710;
+  --merah-hover: #e50914;
+  --putih: #ffffff;
+  --abu-abu: #b3b3b3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: var(--hitam-layar);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.navbar .brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--merah-utama);
+  text-decoration: none !important;
+  margin: 10px;
+  padding-left: 10px;
+}
+
+.navbar .user-info {
+  font-size: 0.85rem;
+  color: var(--abu-abu);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar .user-info span {
+  color: var(--putih);
+  font-weight: 600;
+}
+
+ion-icon {
+  font-size: 25px;
+  padding-right: 15px;
+}
+
+/* login page */
+body.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--hitam-layar);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-box {
+  position: relative;
+  width: 400px;
+  padding: 40px;
+  background: rgba(26, 26, 26, 0.9);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--putih);
+}
+
+.login-box h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--merah-utama);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid var(--putih);
+  margin: 30px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: var(--putih);
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.login .input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: var(--putih);
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+}
+
+.login .input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  line-height: 57px;
+}
+
+.remember-forgot {
+  margin: -15px 0 15px;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forgot label input {
+  margin-right: 3px;
+  accent-color: var(--merah-utama);
+}
+
+.remember-forgot a {
+  color: var(--putih);
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.login .login-box button {
+  width: 100%;
+  height: 40px;
+  background: var(--merah-utama);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--putih);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: var(--merah-hover);
+}
+
+.register-link {
+  font-size: 0.9em;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register-link p a {
+  color: var(--merah-utama);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+.login input:-webkit-autofill,
+.login input:-webkit-autofill:hover,
+.login input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--putih);
+  -webkit-box-shadow: 0 0 0px 1000px rgba(26, 26, 26, 0.9) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* dashboard page */
+body.dashboard {
+  background-color: var(--hitam-bg);
+  color: var(--putih);
+  padding-bottom: 50px;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.highlight {
+  color: var(--merah-utama);
+}
+
+.deskripsi {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--abu-abu);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.batas {
+  width: 70%;
+  border: 0.5px solid #333;
+  margin: 50px auto 20px;
+}
+
+.now-playing {
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--abu-abu);
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.movie-card {
+  background-color: var(--hitam-kartu);
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+  align-items: stretch;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+  border-color: var(--merah-utama);
+}
+
+.movie-card img {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.movie-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.genre {
+  color: var(--merah-utama);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.waktu {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.sinopsis {
+  font-size: 0.85rem;
+  color: var(--abu-abu);
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.harga {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  width: fit-content;
+  color: var(--abu-abu);
+}
+
+.footer-action {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.btn-pesan-besar {
+  background-color: var(--merah-utama);
+  color: white;
+  text-decoration: none;
+  padding: 15px 50px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn-pesan-besar:hover {
+  background-color: var(--merah-hover);
+}
+
+@media (max-width: 550px) {
+  .movie-card {
+    flex-direction: column;
+  }
+  .movie-card img {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* form pesan page */
+.form-pesan {
+  background-color: var(--hitam-layar);
+  color: var(--putih);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.form-pesan h1 {
+  text-align: center;
+  color: var(--putih);
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.form-pesan form {
+  background-color: rgba(26, 26, 26, 0.95);
+  margin-top: 70px;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.form-pesan h2 {
+  font-weight: bold;
+  text-align: center;
+  color: var(--putih);
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.input-row {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.form-pesan .input-box {
+  position: static;
+  height: auto;
+  border-bottom: none;
+  flex: 1;
+  font-size: 14px;
+  margin: 0;
+}
+
+.form-pesan .input-box label {
+  position: static;
+  transform: none;
+  display: block;
+  font-weight: 500;
+  color: var(--abu-abu);
+  margin-bottom: 5px;
+}
+
+.form-pesan .radio-row {
+  display: flex;
+  gap: 40px;
+  margin-top: 8px;
+}
+
+.form-pesan .radio-row label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+  color: var(--putih);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: var(--abu-abu);
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  background-color: #252525;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+  font-size: 0.9rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: var(--merah-utama);
+}
+
+select option {
+  background-color: #252525;
+}
+
+.form-pesan input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--merah-utama);
+}
+
+.form-pesan button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: var(--merah-utama);
+  color: white;
+  font-size: 1rem;
+}
+
+.form-pesan button[type="submit"]:hover {
+  background-color: var(--merah-hover);
+}
+
+.form-pesan button[type="reset"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: transparent;
+  color: var(--abu-abu);
+  text-decoration: underline;
+}
+
+.form-pesan button[type="reset"]:hover {
+  color: white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--putih);
+  -webkit-box-shadow: 0 0 0px 1000px #252525 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* berhasil page */
+body.berhasil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--hitam-layar);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.card {
+  width: 420px;
+  padding: 35px;
+  background: var(--hitam-kartu);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--putih);
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--putih);
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: var(--abu-abu);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.card .btn-detail {
+  display: inline-block;
+  background-color: var(--merah-utama);
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.card .btn-detail:hover {
+  background-color: var(--merah-hover);
+}
+
+/* invoice page */
+body.invoice {
+  background-color: var(--hitam-bg);
+  color: var(--putih);
+  padding-bottom: 60px;
+}
+
+.invoice-wrapper {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.invoice-wrapper h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--putih);
+  border-left: 4px solid var(--merah-utama);
+  padding-left: 12px;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice-table tr {
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.invoice-table td {
+  padding: 14px 10px;
+  font-size: 0.9rem;
+}
+
+.invoice-table td:first-child {
+  color: var(--abu-abu);
+  width: 40%;
+}
+
+.invoice-table td:last-child {
+  color: var(--putih);
+  font-weight: 500;
+}
+
+.invoice-table .total-row td {
+  background-color: var(--merah-utama);
+  color: white !important;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.btn-pesan-lagi {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0;
+  background-color: transparent;
+  border: 1px solid var(--abu-abu);
+  color: var(--abu-abu);
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.btn-pesan-lagi:hover {
+  border-color: var(--putih);
+  color: var(--putih);
+}
