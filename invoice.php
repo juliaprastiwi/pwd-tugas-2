@@ -100,7 +100,7 @@ $totalBayar = $hargaPerTiket * $jumlah;
         </tr>
       </table>
 
-      <a href="formPemesanan.php" class="btn-pesan-lagi">Pesan Lagi</a>
+      <a href="formPesan.php" class="btn-pesan-lagi">Pesan Lagi</a>
     </div>
 
   </body>
